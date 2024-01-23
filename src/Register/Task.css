@@ -1,0 +1,68 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.tasks{
+    background-color: #1C1353;
+    min-height: 300px;
+    /* padding-left: 10%; */
+    /* color: white; */
+}
+.tasks .choose{
+   margin-left: 40%;
+   cursor: pointer;
+}
+@media (min-width:320px)and (max-width:425px ) { 
+    .tasks .choose{
+        margin-left: 15%;
+    }
+    .tasks h1{
+        text-align: center;
+    }
+}
+
+/* @media(max-width:768px){
+    .tasks .choose{
+        margin-left: 38%;
+    }
+} */
+.tasks h1{
+    color: white;
+    font-size: 50px;
+}
+.tasks h2{
+   color: #AEAEAE;
+   text-align: center;
+   font-weight: bold;
+   
+}
+.tasks .active{
+    color: white;
+    text-align: center;
+   font-weight: bold;
+}
+.tasks .card{
+  background-color: white;
+  min-width: 100px;
+  padding: 25px 25px 25px 25px;
+  border-radius: 20px;
+  box-shadow: 1px -2px 0 2px #cecdcd;
+}
+.tasks .card h4{
+    font-weight: bold;
+    cursor: pointer;
+}
+.tasks .card span{
+    font-size: 18px;
+    font-weight: bold;
+    color: #1C1353;
+    cursor: pointer;
+}
+.tasks .card span:hover{
+    text-decoration: underline;
+}
+.tasks .card:hover{
+    border: 1px solid #2c2170;
+}
+
