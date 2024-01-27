@@ -5,7 +5,7 @@ body{
 }
 .tasks{
     background-color: #1C1353;
-    min-height: 300px;
+    min-height: 100%;
     /* padding-left: 10%; */
     /* color: white; */
 }
