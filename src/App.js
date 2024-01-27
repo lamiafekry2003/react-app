@@ -3,6 +3,7 @@ import Form from "./Register/Register";
 import Tasks from "./Register/Task";
 import Done from "./Register/Done";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Signup from "./Register/Signup";
 
 // class App extends React.Component{
 //   constructor(props){
@@ -61,7 +62,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Form />} />
+          <Route path="/" element={<Signup/>}></Route>
+          <Route path="/form" element={<Form />} />
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/done" element={<Done />} />
         </Routes>

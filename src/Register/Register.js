@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Spinner from "./Spinner";
 function Form() {
   const [yourfname, setyourfName] = useState("");
   const [yourlname, setyourlName] = useState("");
@@ -12,6 +13,16 @@ function Form() {
   const history = useNavigate();
   let userName;
   let userTasks = [];
+  let [loading, setLoading] = useState(false);
+
+  const hadleLoading = () =>{
+    setLoading(true);
+    setButtonText(false)
+    setTimeout(() => {
+      setLoading(false)
+      setButtonText("Fetched")
+    }, 2000);
+  }
 
   // for validation
   //  const formsubmithandler=(e)=>{}
@@ -123,9 +134,9 @@ function Form() {
       });
     }
   }
-  const clickhandeler = (e) => {
-    setButtonText("Await");
-  };
+
+  
+  
   const namefhandler = (e) => {
     setyourfName(e.target.value);
   };
@@ -187,9 +198,14 @@ function Form() {
                     className="mt-4 "
                     onChange={passwordhandler}
                   />
-                  <button type="submit" id="submit" onClick={clickhandeler}>
+                  <button type="submit" id="submit" className="logRes" onClick={hadleLoading}>
                     {buttonText}
+                    {loading ? <Spinner/>:""}
                   </button>
+                  {/* {loading ? <Spinner/>:""} */}
+                  {/* <button type="submit" id="submit" className="non">
+                    <div className="loader"></div>
+                  </button> */}
                 </form>
               </div>
             </div>
