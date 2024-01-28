@@ -17,7 +17,10 @@ function Form() {
 
   const hadleLoading = () =>{
     setLoading(true);
-    setButtonText(false)
+    setButtonText(false);
+    let button=document.querySelector(".logRes")
+    button.style.backgroundColor="#ececed"
+    button.style.color="#0a1533"
     setTimeout(() => {
       setLoading(false)
       setButtonText("Fetched")
@@ -166,7 +169,7 @@ function Form() {
                   onSubmit={formsubmithandler}
                 >
                   <p className="error mt-4 "></p>
-                  <input
+                  {/* <input
                     type="text"
                     name="fname"
                     id="frname"
@@ -181,7 +184,7 @@ function Form() {
                     placeholder="Lastname"
                     className="mt-4 "
                     onChange={namelhandler}
-                  />
+                  /> */}
                   <input
                     type="email"
                     name="email"

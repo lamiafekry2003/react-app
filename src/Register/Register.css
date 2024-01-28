@@ -18,7 +18,7 @@ form input{
     border: 3px solid #0a1533 ;
     clip-path:#0a1533 ;
     padding: 10px 55px 10px 20px;
-    margin-left: 27px;
+    margin: 10px 20px ;
     
 }
 form input:focus{
@@ -28,7 +28,7 @@ form input:focus{
     display: flex;
 }
 button{
-   margin:35px 8%;
+   margin:30px 10%;
    /* 33% 25px ;  */
    /* margin: 20px 16%; */
    padding: 10px 30px ;
@@ -45,6 +45,7 @@ button.log{
     background-color: #ececed;
     border: 1px solid #0a1533;
     color: #0a1533;
+    margin-left: -15px;
 }
 .logRes{
     margin: 35px 31%;
@@ -57,7 +58,7 @@ button.log{
     height: 30px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color:#ffff ;
+    border-top-color: #0a1533;
     animation: load 1s ease  infinite;
     margin: auto;
 }
