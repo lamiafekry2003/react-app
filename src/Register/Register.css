@@ -4,9 +4,10 @@ body{
     box-sizing: border-box;
 }
 .header{
-    width: 360px;
+    /* width: 360px; */
+    width: 23%;
     background-color: #ececed;
-    margin: 10% auto;
+    margin: 13% auto;
     min-height: 100px;
     border-radius: 20px;
     box-shadow: 3px 8px 4px 0 #9b9b9b;
@@ -18,7 +19,7 @@ form input{
     border: 3px solid #0a1533 ;
     clip-path:#0a1533 ;
     padding: 10px 55px 10px 20px;
-    margin: 10px 20px ;
+    margin: 10px 15px ;
     
 }
 form input:focus{
