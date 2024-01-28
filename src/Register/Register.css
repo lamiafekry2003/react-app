@@ -32,9 +32,7 @@ form input:focus{
     display: flex;
 }
 button{
-   margin:30px 12%;
-   /* 33% 25px ;  */
-   /* margin: 20px 16%; */
+   margin:30px 10%;
    padding: 10px 30px ;
    background-color: #0a1533;
    color: white ;
@@ -44,6 +42,7 @@ button{
    border: none;
    display: grid;
    text-align: center;
+   
 }
 button.log{
     background-color: #ececed;
@@ -52,7 +51,10 @@ button.log{
     margin-left: -15px;
 }
 .logRes{
-    margin: 35px 31%;
+    margin: 35px 35%;
+}
+.sign{
+    margin-left: 15%;
 }
 
 

@@ -2,14 +2,29 @@ import React ,{ useState } from "react";
 import "./Register.css";
 import { Link ,useNavigate } from "react-router-dom";
 import Form from "./Register";
+import Spinner from "./Spinner";
 function Signup() {
   // validation
   const [yourfname, setyourfName] = useState("");
   const [yourlname, setyourlName] = useState("");
   const [youremail, setyouremail] = useState("");
   const [yourpassword, setyourpassword] = useState("");
-   const [submitted, setsubmitted] = useState(false);
-   const navigate = useNavigate();
+  const [submitted, setsubmitted] = useState(false);
+  const navigate = useNavigate();
+  let [loading, setLoading] = useState(false);
+  const [buttonText, setButtonText] = useState("SignUP");
+
+  const hadleLoading = () =>{
+    setLoading(true);
+    setButtonText(false);
+    let button=document.querySelector(".sign")
+    button.style.backgroundColor="#ececed"
+    button.style.color="#0a1533"
+    setTimeout(() => {
+      setLoading(false)
+      setButtonText("Fetched")
+    }, 2000);
+  }
 
   async function formsubmithandler(e){
     e.preventDefault();
@@ -129,8 +144,12 @@ function Signup() {
               />
                 <p className="erpass mt-4 "></p>
               <div className="buto">
-                <button type="submit" id="submit">
+                {/* <button type="submit" id="submit" className="sign">
                   SignUp
+                </button> */}
+                <button type="submit" id="submit" className="sign" onClick={hadleLoading}>
+                    {buttonText}
+                    {loading ? <Spinner/>:""}
                 </button>
 
                 <Link to="/form" style={{ textDecoration: "none" }}>
