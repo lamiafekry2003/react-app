@@ -12,6 +12,11 @@ body{
     box-shadow: 3px 8px 4px 0 #9b9b9b;
 
 }
+@media (max-width:425px) {
+    .header{
+        margin: 13% 20px ;
+    }
+}
 form input{
     /* padding: 25px 18px !important; */
     border-radius: 15px !important;
